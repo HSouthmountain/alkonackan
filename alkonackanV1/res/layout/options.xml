@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <RadioGroup android:id="@+id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/radioMan" android:layout_height="wrap_content" android:layout_width="wrap_content" android:checked="true" android:text="Man"></RadioButton>
+        <RadioButton android:id="@+id/radioKvinna" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Kvinna"></RadioButton>
+    </RadioGroup>
+    <Spinner android:layout_width="fill_parent" android:id="@+id/spinner1" android:layout_height="wrap_content"></Spinner>
+</LinearLayout>
