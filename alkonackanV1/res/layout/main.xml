@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <TextView android:text="TextView" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <Button android:id="@+id/buttonAbout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About"></Button>
-    <Button android:text="Start" android:id="@+id/buttonStart" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    android:layout_height="fill_parent" android:paddingBottom="75sp" android:background="#FFFFFF">
+    <Button android:id="@+id/buttonAbout" android:layout_width="wrap_content" android:text="Info" android:layout_gravity="top|right" android:layout_height="35sp" android:layout_marginTop="5sp" android:layout_marginRight="5sp" android:textSize="10sp"></Button>
+    <TextView android:layout_width="wrap_content" android:id="@+id/textView1" android:gravity="center|center_horizontal" android:keepScreenOn="true" android:layout_gravity="center" android:layout_height="225dip" android:layout_marginBottom="80sp" android:textSize="26sp" android:text="ALKONACKAN" android:textColor="#333333"></TextView>
+    <Button android:id="@+id/buttonStart" android:layout_width="fill_parent" android:layout_height="50sp" android:text="Kom igång!" android:gravity="center" android:layout_gravity="bottom|center_horizontal" android:layout_marginLeft="65sp" android:layout_marginRight="65sp"></Button>
 </LinearLayout>
