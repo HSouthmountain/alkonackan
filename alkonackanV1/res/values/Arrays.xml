@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="vikt">
+   	<item>45kg</item>
+   	<item>54kg</item>
+   	<item>63kg</item>
+   	<item>73kg</item>
+   	<item>81kg</item>
+   	<item>90kg</item>
+   	<item>100kg</item>
+   	<item>109kg</item>
+   </string-array>
+   
+   <string-array name="kanslor">
+   	<item>Glad</item>
+   	<item>Avslappnad</item>
+   	<item>Mysig, nöjd</item>
+   	<item>Uttråkad</item>
+   	<item>Romantisk</item>
+   	<item>Sexig</item>
+   	<item>Spänd, nervös</item>
+   	<item>Arg</item>
+   	<item>Trött, sömnig</item>
+   	<item>Ledsen</item>
+   	<item>Illamående</item>
+   	<item>Annan</item>
+   </string-array>
+</resources>

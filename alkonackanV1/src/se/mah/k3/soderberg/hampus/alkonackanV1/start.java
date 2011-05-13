@@ -10,12 +10,18 @@ public class start extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.options);
+        setContentView(R.layout.session);
         
-        Spinner s = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(
-                this, R.array.ManVikt, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
+       /* Spinner vikt = (Spinner) findViewById(R.id.spinner_vikt);
+        ArrayAdapter adapter_vikt = ArrayAdapter.createFromResource(
+                this, R.array.vikt, android.R.layout.simple_spinner_item);
+        adapter_vikt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        vikt.setAdapter(adapter_vikt);*/
+        
+        Spinner kanslor = (Spinner) findViewById(R.id.spinner_kanslor);
+        ArrayAdapter adapter_kanslor = ArrayAdapter.createFromResource(
+                this, R.array.kanslor, android.R.layout.simple_spinner_item);
+        adapter_kanslor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        kanslor.setAdapter(adapter_kanslor);
     }
 }

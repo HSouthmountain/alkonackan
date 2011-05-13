@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-    <TextView android:id="@+id/textViewAboutHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Studenthälsan\nAlkonackan"></TextView>
-    <TextView android:text="TextViewAboutText" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    android:background="#FFFFFF">
+    <TextView android:id="@+id/textViewAboutHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#333333" android:layout_gravity="center" android:textSize="26sp" android:text="Studenthälsan" android:layout_marginTop="10sp"></TextView>
+    <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#333333" android:layout_gravity="center" android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." android:layout_margin="20sp"></TextView>
+    <Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tillbaka" android:layout_gravity="center" android:layout_marginTop="35sp"></Button>
 </LinearLayout>
