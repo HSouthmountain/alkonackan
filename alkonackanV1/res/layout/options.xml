@@ -4,20 +4,59 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFFFFF">
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1" android:text="Dina inställningar" android:soundEffectsEnabled="false" android:textColor="#333333" android:layout_gravity="center_horizontal" android:layout_marginTop="30sp" android:textSize="24sp" android:layout_marginBottom="35sp"></TextView>
-    <RadioGroup android:id="@+id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="center" android:layout_marginBottom="20sp">
-        <RadioButton android:id="@+id/radioMan" android:layout_height="wrap_content" android:layout_width="wrap_content" android:checked="true" android:text="Man" android:textColor="#333333" android:layout_marginRight="5sp"></RadioButton>
-        <RadioButton android:id="@+id/radioKvinna" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Kvinna" android:textColor="#333333" android:layout_marginLeft="5sp"></RadioButton>
-    </RadioGroup>
-    
-    <Spinner android:layout_width="fill_parent"
-	android:layout_height="wrap_content" android:layout_marginLeft="50sp"
-	android:layout_marginRight="50sp" android:prompt="@string/vikt_prompt"
-	android:drawSelectorOnTop="true" android:fadeScrollbars="true"
-	android:layout_marginBottom="60sp" android:contentDescription="Vikt"
-	android:id="@+id/spinner_vikt">>
+    <TextView 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/textView1" 
+    	android:text="Dina inställningar" 
+    	android:soundEffectsEnabled="false" 
+    	android:textColor="#333333" 
+    	android:layout_gravity="center_horizontal" 
+    	android:layout_marginTop="30sp" 
+    	android:textSize="24sp" 
+    	android:layout_marginBottom="35sp">
+    </TextView>
+    <RadioGroup 
+    	android:id="@+id/radioGroup1" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:orientation="horizontal" 
+    	android:layout_gravity="center" 
+    	android:layout_marginBottom="20sp">
+        <RadioButton android:id="@+id/radioMan" 
+        	android:layout_height="wrap_content" 
+        	android:layout_width="wrap_content" 
+        	android:checked="true" 
+        	android:text="Man" 
+        	android:textColor="#333333" 
+        	android:layout_marginRight="5sp">
+        </RadioButton>
+        <RadioButton 
+        	android:id="@+id/radioKvinna" 
+        	android:layout_height="wrap_content" 
+        	android:layout_width="wrap_content" 
+        	android:text="Kvinna" 
+        	android:textColor="#333333" 
+        	android:layout_marginLeft="5sp">
+        </RadioButton>
+    </RadioGroup> 
+    <Spinner 
+    	android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_marginLeft="50sp"
+		android:layout_marginRight="50sp" 
+		android:prompt="@string/vikt_prompt"
+		android:drawSelectorOnTop="true" 
+		android:fadeScrollbars="true"
+		android:layout_marginBottom="60sp" 
+		android:contentDescription="Vikt"
+		android:id="@+id/spinner_vikt">>
 	</Spinner>
-	
-	
-    <Button android:id="@+id/button1" android:layout_width="wrap_content" android:text="Kom igång!" android:layout_height="40sp" android:layout_gravity="bottom|center_horizontal"></Button>
+    <Button 
+    	android:id="@+id/button1" 
+    	android:layout_width="wrap_content" 
+    	android:text="Kom igång!" 
+    	android:layout_height="40sp" 
+    	android:layout_gravity="bottom|center_horizontal">
+    </Button>
 </LinearLayout>
