@@ -11,7 +11,7 @@
     	android:text="Dina inställningar" 
     	android:textColor="#333333" 
     	android:layout_gravity="center_horizontal" 
-    	android:layout_marginTop="30sp" 
+    	android:layout_marginTop="20sp" 
     	android:textSize="24sp" 
     	android:layout_marginBottom="30sp">
     </TextView>
@@ -22,7 +22,8 @@
     	android:orientation="horizontal" 
     	android:layout_gravity="center" 
     	android:layout_marginBottom="20sp">
-        <RadioButton android:id="@+id/radioMan" 
+        <RadioButton 
+        	android:id="@+id/radioMan" 
         	android:layout_height="wrap_content" 
         	android:layout_width="wrap_content" 
         	android:checked="true" 
@@ -47,7 +48,7 @@
 		android:prompt="@string/vikt_prompt"
 		android:drawSelectorOnTop="true" 
 		android:fadeScrollbars="true"
-		android:layout_marginBottom="140sp" 
+		android:layout_marginBottom="150sp" 
 		android:contentDescription="Vikt"
 		android:id="@+id/spinner_vikt">
 	</Spinner>

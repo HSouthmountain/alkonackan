@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="#FFFFFF">
-    <Button 
-    	android:id="@+id/buttonAbout" 
-    	android:layout_width="wrap_content" 
-    	android:text="Info" 
-    	android:layout_gravity="top|right" 
-    	android:layout_height="35sp" 
-    	android:layout_marginTop="5sp" 
-    	android:layout_marginRight="5sp" 
-    	android:textSize="18sp">
-    </Button>
+    android:layout_height="fill_parent"
+    android:paddingLeft="20dip" 
+	android:paddingRight="20dip"
+	android:paddingTop="20dip" 
+	android:paddingBottom="20dip" 
+    android:background="#FFFFFF" android:layout_gravity="top" android:orientation="vertical">
+    <ImageButton 
+    	android:layout_width="50dip" 
+    	android:layout_height="50dip" 
+    	android:src="@drawable/icon_info" 
+    	android:id="@+id/imageButton1" 
+    	android:layout_gravity="right">
+    </ImageButton>
     <TextView 
     	android:layout_width="wrap_content" 
     	android:id="@+id/textView1" 
@@ -21,7 +21,7 @@
     	android:keepScreenOn="true" 
     	android:layout_gravity="center" 
     	android:layout_height="225dip" 
-    	android:layout_marginBottom="80sp" 
+    	android:layout_marginBottom="50sp" 
     	android:textSize="24sp" 
     	android:text="ALKONACKAN" 
     	android:textColor="#333333">

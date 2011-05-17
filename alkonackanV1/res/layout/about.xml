@@ -12,7 +12,7 @@
     	android:layout_gravity="center" 
     	android:textSize="26sp" 
     	android:text="Studenthälsan" 
-    	android:layout_marginTop="10sp">
+    	android:layout_marginTop="20sp">
     </TextView>
     <TextView 
     	android:id="@+id/textView2" 
@@ -25,9 +25,10 @@
     </TextView>
     <Button android:id="@+id/button1" 
     	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
+    	android:layout_height="40sp" 
     	android:text="Tillbaka" 
+    	android:layout_marginTop="65sp"
     	android:layout_gravity="center" 
-    	android:layout_marginTop="35sp">
+    	android:textSize="18sp">
     </Button>
 </LinearLayout>
