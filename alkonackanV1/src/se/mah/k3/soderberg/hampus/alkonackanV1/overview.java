@@ -14,26 +14,8 @@ public class overview extends Activity {
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
-setContentView(R.layout.options);
+setContentView(R.layout.overview);
 
-/*String[] data = new String[]{"14 mars, 2011", "15 mars, 2011", "23 mars, 2011","27 mars, 2011", "5 maj, 2011", "15 maj, 2011", "24 maj, 2011", "4 juni, 2011", "10 juni, 2011"};
-ListView lst = (ListView) findViewById( R.id.listViewSessions);
-ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.minlistitem, data );
-lst.setAdapter(adapter);
-*/
 
-/* Spinner vikt = (Spinner) findViewById(R.id.spinner_vikt);
-ArrayAdapter adapter_vikt = ArrayAdapter.createFromResource(
-this, R.array.vikt, android.R.layout.simple_spinner_item);
-adapter_vikt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-vikt.setAdapter(adapter_vikt);
-*/
-
-/* Spinner kanslor = (Spinner) findViewById(R.id.spinner_kanslor);
-ArrayAdapter adapter_kanslor = ArrayAdapter.createFromResource(
-this, R.array.kanslor, android.R.layout.simple_spinner_item);
-adapter_kanslor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-kanslor.setAdapter(adapter_kanslor);
-*/
 }
 }

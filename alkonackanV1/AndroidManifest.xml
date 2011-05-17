@@ -13,6 +13,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		
+		<activity android:name = "about"></activity>
+		<activity android:name = "options"></activity>
+		<activity android:name = "overview"></activity>
+		<activity android:name = "session"></activity>
+		<activity android:name = "sessionlist"></activity>
+
 
     </application>
 </manifest>
