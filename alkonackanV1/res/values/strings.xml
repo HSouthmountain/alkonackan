@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="vikt_prompt">Vikt</string>
+    <string name="vikt_prompt">Vikt</string>
 	<string name="kanslor_prompt">Kanslor</string>
-    <string name="hello">Hello World, start!</string>
-    <string name="app_name">alkonackanV1</string>
+	<string name="hello">Hello World, start!</string>
+	<string name="app_name">alkonackanV1</string>
+	<color name="listColor">#000000</color>
+	<color name="dividerColor">#333333</color>
 </resources>

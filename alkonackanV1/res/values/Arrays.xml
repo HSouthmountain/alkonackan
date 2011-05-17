@@ -25,4 +25,9 @@
    	<item>Illamående</item>
    	<item>Annan</item>
    </string-array>
+   <string-array name="sessionItems">
+   	<item>Session 1</item>
+   	<item>Session 2</item>
+   	<item>Session 3</item>
+   </string-array>
 </resources>
