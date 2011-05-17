@@ -22,6 +22,8 @@ ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.minlistit
 lst.setAdapter(adapter);
 
 
+// här finns det bajs att hämta
+
 
 /* Spinner vikt = (Spinner) findViewById(R.id.spinner_vikt);
 ArrayAdapter adapter_vikt = ArrayAdapter.createFromResource(
