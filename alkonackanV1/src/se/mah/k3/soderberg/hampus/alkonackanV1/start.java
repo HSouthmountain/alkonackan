@@ -23,6 +23,7 @@ lst.setAdapter(adapter);
 
 
 
+
 /* Spinner vikt = (Spinner) findViewById(R.id.spinner_vikt);
 ArrayAdapter adapter_vikt = ArrayAdapter.createFromResource(
 this, R.array.vikt, android.R.layout.simple_spinner_item);
