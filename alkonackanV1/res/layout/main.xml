@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" 
-    android:paddingBottom="75sp" 
     android:background="#FFFFFF">
     <Button 
     	android:id="@+id/buttonAbout" 
@@ -13,7 +12,7 @@
     	android:layout_height="35sp" 
     	android:layout_marginTop="5sp" 
     	android:layout_marginRight="5sp" 
-    	android:textSize="10sp">
+    	android:textSize="18sp">
     </Button>
     <TextView 
     	android:layout_width="wrap_content" 
@@ -23,18 +22,16 @@
     	android:layout_gravity="center" 
     	android:layout_height="225dip" 
     	android:layout_marginBottom="80sp" 
-    	android:textSize="26sp" 
+    	android:textSize="24sp" 
     	android:text="ALKONACKAN" 
     	android:textColor="#333333">
     </TextView>
     <Button 
     	android:id="@+id/buttonStart" 
-    	android:layout_width="fill_parent" 
-    	android:layout_height="50sp" 
     	android:text="Kom igång!" 
-    	android:gravity="center" 
-    	android:layout_gravity="bottom|center_horizontal" 
-    	android:layout_marginLeft="65sp" 
-    	android:layout_marginRight="65sp">
+    	android:layout_width="wrap_content" 
+    	android:layout_height="40sp" 
+    	android:textSize="18sp" 
+    	android:layout_gravity="center_horizontal|bottom">
     </Button>
 </LinearLayout>

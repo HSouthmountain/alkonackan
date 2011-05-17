@@ -9,12 +9,11 @@
     	android:layout_width="wrap_content" 
     	android:id="@+id/textView1" 
     	android:text="Dina inställningar" 
-    	android:soundEffectsEnabled="false" 
     	android:textColor="#333333" 
     	android:layout_gravity="center_horizontal" 
     	android:layout_marginTop="30sp" 
     	android:textSize="24sp" 
-    	android:layout_marginBottom="35sp">
+    	android:layout_marginBottom="30sp">
     </TextView>
     <RadioGroup 
     	android:id="@+id/radioGroup1" 
@@ -48,15 +47,16 @@
 		android:prompt="@string/vikt_prompt"
 		android:drawSelectorOnTop="true" 
 		android:fadeScrollbars="true"
-		android:layout_marginBottom="60sp" 
+		android:layout_marginBottom="140sp" 
 		android:contentDescription="Vikt"
-		android:id="@+id/spinner_vikt">>
+		android:id="@+id/spinner_vikt">
 	</Spinner>
     <Button 
     	android:id="@+id/button1" 
     	android:layout_width="wrap_content" 
     	android:text="Kom igång!" 
     	android:layout_height="40sp" 
-    	android:layout_gravity="bottom|center_horizontal">
+    	android:layout_gravity="center_horizontal|bottom"
+    	android:textSize="18sp">
     </Button>
 </LinearLayout>

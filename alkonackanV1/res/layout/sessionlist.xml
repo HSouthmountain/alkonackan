@@ -3,12 +3,23 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:background="#FFFFFF">
+    <TextView 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/sessionlisttext" 
+    	android:text="Sessionlist" 
+    	android:textColor="#333333" 
+    	android:layout_gravity="center_horizontal" 
+    	android:textSize="24sp" 
+    	android:layout_marginTop="30sp"
+    	android:layout_marginBottom="5sp">
+    </TextView>
     <Button 
     	android:id="@+id/buttonNewSession" 
     	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
-    	android:text="Ny session">
+    	android:text="Ny Session" 
+    	android:textSize="18sp" android:layout_height="wrap_content" android:layout_gravity="center">
     </Button>
     <ListView 
     	android:id="@+id/listViewSessions" 

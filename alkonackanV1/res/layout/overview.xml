@@ -3,12 +3,46 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:background="#FFFFFF" 
+    android:paddingLeft="10sp" 
+    android:paddingRight="10sp">
+    <TextView
+    	android:id="@+id/Sammanfattning"
+    	android:text="Sammanfattning"
+    	android:layout_gravity="center_horizontal" 
+    	android:layout_marginTop="30sp"
+    	android:layout_marginBottom="15sp" 
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textSize="24sp" 
+    	android:textColor="#333333" >
+    </TextView>
+    <TextView 
+    	android:text="Känsla" 
+    	android:id="@+id/kanslosam" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:textColor="#333333" 
+    	android:textSize="24sp"
+    	android:layout_marginBottom="10sp">
+    </TextView>
     <TextView 
     	android:text="Plats" 
     	android:id="@+id/textViewOverviewLocationHeader" 
     	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content">
+    	android:layout_height="wrap_content"
+    	android:textColor="#333333" 
+    	android:textSize="24sp"
+    	android:layout_marginBottom="10sp">
+    </TextView>
+    <TextView 
+    	android:text="Med" 
+    	android:id="@+id/medsam" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:textColor="#333333" 
+    	android:textSize="24sp"
+    	android:layout_marginBottom="10sp">
     </TextView>
     <ListView 
     	android:id="@+id/listViewOverviewLocations" 
