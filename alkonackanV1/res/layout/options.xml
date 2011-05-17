@@ -16,12 +16,11 @@
     	android:layout_marginBottom="30sp">
     </TextView>
     <RadioGroup 
-    	android:id="@+id/radioGroup1" 
     	android:layout_width="wrap_content" 
     	android:layout_height="wrap_content" 
     	android:orientation="horizontal" 
     	android:layout_gravity="center" 
-    	android:layout_marginBottom="20sp">
+    	android:layout_marginBottom="20sp" android:id="@+id/radioManKvinna">
         <RadioButton 
         	android:id="@+id/radioMan" 
         	android:layout_height="wrap_content" 
@@ -49,15 +48,13 @@
 		android:drawSelectorOnTop="true" 
 		android:fadeScrollbars="true"
 		android:layout_marginBottom="150sp" 
-		android:contentDescription="Vikt"
-		android:id="@+id/spinner_vikt">
+		android:contentDescription="Vikt" android:id="@+id/spinnerVikt">
 	</Spinner>
     <Button 
-    	android:id="@+id/button1" 
     	android:layout_width="wrap_content" 
     	android:text="Kom igång!" 
     	android:layout_height="40sp" 
     	android:layout_gravity="center_horizontal|bottom"
-    	android:textSize="18sp">
+    	android:textSize="18sp" android:id="@+id/buttonOptionsStart">
     </Button>
 </LinearLayout>
