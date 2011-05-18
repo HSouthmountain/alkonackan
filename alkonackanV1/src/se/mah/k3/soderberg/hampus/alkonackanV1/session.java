@@ -1,8 +1,11 @@
 package se.mah.k3.soderberg.hampus.alkonackanV1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SlidingDrawer;
 import android.widget.SlidingDrawer.OnDrawerCloseListener;
@@ -45,5 +48,15 @@ public class session extends Activity {
 		adapter_kanslor
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		kanslor.setAdapter(adapter_kanslor);
+		
+		Button avsluta_session = (Button) findViewById(R.id.buttonAvslutaSession);
+		avsluta_session.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent show_overview = new Intent(session.this, overview.class);
+				startActivity(show_overview);
+			}
+		});	
 	}
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -26,6 +27,17 @@ public class start extends Activity {
 			public void onClick(View v) {
 				Intent show_options = new Intent(start.this, options.class);
 				startActivity(show_options);
+				
+			}
+		});
+		
+		ImageButton info_knapp = (ImageButton) findViewById(R.id.buttonInfo);
+		info_knapp.setOnClickListener(new View.OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				Intent show_about = new Intent(start.this, about.class);
+				startActivity(show_about);
 				
 			}
 		});
