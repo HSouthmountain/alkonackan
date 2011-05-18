@@ -1,48 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" 
-	android:layout_height="fill_parent"
-	android:paddingLeft="20dip" 
-	android:paddingRight="20dip"
-	android:paddingTop="20dip" 
-	android:orientation="vertical"
-	android:background="#FFFFFF">
-	<Spinner 
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-	 	android:prompt="@string/kanslor_prompt"
-		android:drawSelectorOnTop="true" 
-		android:fadeScrollbars="true"
-	 	android:contentDescription="Kanslor"
-		android:id="@+id/spinner_kanslor">>
-	</Spinner>	
-	<EditText 
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:id="@+id/editText1" 
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:paddingLeft="20dip" android:paddingRight="20dip"
+	android:paddingTop="20dip" android:orientation="vertical"
+	android:background="#FFFFFF" xmlns:android="http://schemas.android.com/apk/res/android">
+	<Spinner android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:prompt="@string/kanslor_prompt"
+		android:drawSelectorOnTop="true" android:fadeScrollbars="true"
+		android:contentDescription="Kanslor" android:id="@+id/spinner_kanslor">>
+</Spinner>
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/editText1"
 		android:hint="Vart är du?">
 	</EditText>
-	<EditText 
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:id="@+id/editText2" 
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/editText2"
 		android:hint="Med vem?">
 	</EditText>
-	<SlidingDrawer android:id="@+id/slidingDrawerOffDrawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:handle="@+id/handle" android:content="@+id/content">
-		<Button android:text="Handle" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/handle"></Button>
-		<LinearLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"></LinearLayout>
-		<EditText 
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:id="@+id/editText1" 
-		android:hint="Vart är du?">
-	</EditText>
-		<TextView 
-    	android:text="Shutdown" 
-    	android:textColor="#000000"
-    	android:id="@+id/textViewTestText" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content">
-    	</TextView>
+
+	<TableLayout android:id="@+id/tableLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10sp">
+		<TableRow android:id="@+id/tableRow1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10sp">
+			<ImageButton android:src="@drawable/icon_stark" android:id="@+id/button_stark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0sp"></ImageButton>
+			<ImageButton android:src="@drawable/icon_folk" android:id="@+id/button_folk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
+			<ImageButton android:src="@drawable/icon_vin" android:id="@+id/button_vin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
+		</TableRow>
+		<TableRow android:id="@+id/tableRow2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<ImageButton android:src="@drawable/icon_drink" android:id="@+id/button_drink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0sp"></ImageButton>
+			<ImageButton android:src="@drawable/icon_oel" android:id="@+id/button_oel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
+			<ImageButton android:src="@drawable/icon_shot" android:id="@+id/button_shot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
+		</TableRow>
+	</TableLayout>
+
+
+ 	<SlidingDrawer android:id="@+id/slidingDrawerOffDrawer"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:handle="@+id/handle" android:content="@+id/content">
+		
+		<Button android:text="Handle" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/handle">
+		</Button>
+		<LinearLayout android:id="@+id/content"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+		</LinearLayout>
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/editText1"
+			android:hint="Vart är du?">
+		</EditText>
+		<TextView android:text="Shutdown" android:textColor="#000000"
+			android:id="@+id/textViewTestText" android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</TextView>
 	</SlidingDrawer>
+ 
+
+<!--  <SlidingDrawer
+     android:id="@+id/slidingDrawerOffDrawer"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+
+     android:handle="@+id/handle"
+     android:content="@+id/content">
+
+     <ImageView
+         android:id="@id/handle"
+         android:layout_width="88dip"
+         android:layout_height="44dip" />
+
+     <GridView
+         android:id="@id/content"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent" />
+
+ </SlidingDrawer> -->
+
+
 </LinearLayout>
