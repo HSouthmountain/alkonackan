@@ -7,15 +7,17 @@
 		android:layout_height="wrap_content" android:prompt="@string/kanslor_prompt"
 		android:drawSelectorOnTop="true" android:fadeScrollbars="true"
 		android:contentDescription="Kanslor" android:id="@+id/spinner_kanslor"
-		android:layout_marginTop="20sp">
+		android:layout_marginTop="21sp">
 </Spinner>
 	<EditText android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:id="@+id/editText1"
-		android:hint="Vart är du?" android:layout_marginTop="75sp">
+		android:layout_height="wrap_content" android:id="@+id/editText_var"
+		android:hint="Vart är du?" android:layout_marginTop="75sp"
+		android:maxLines="1">
 	</EditText>
 	<EditText android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:id="@+id/editText2"
-		android:hint="Med vem?" android:layout_marginTop="130sp">
+		android:layout_height="wrap_content" android:id="@+id/editText_vem"
+		android:hint="Med vem?" android:layout_marginTop="130sp"
+		android:maxLines="1">
 	</EditText>
 
 	<TableLayout 
@@ -68,7 +70,8 @@
 		android:layout_width="fill_parent" 
 		android:layout_height="fill_parent"
 		android:handle="@+id/handle" 
-		android:content="@+id/content">
+		android:content="@+id/content"
+		android:layout_marginTop="400dip">
 		
 		<ImageView
 			android:id="@id/handle"
@@ -78,17 +81,17 @@
          	
 		<LinearLayout android:id="@+id/content"
 			android:layout_width="fill_parent" 
-			android:layout_height="fill_parent"
+			android:layout_height="wrap_content"
 			android:gravity="center_horizontal"
-			android:background="#fff"
-			android:padding="20dip">
+			android:background="#e8e8e8">
 			
 			<Button 
 				android:text="Avsluta session" 
 				android:layout_height="wrap_content" 
 				android:layout_width="wrap_content" 
 				android:id="@+id/buttonAvslutaSession" 
-				android:textSize="18sp">
+				android:textSize="18sp"
+				android:layout_margin="20dip">
 			</Button>
 			
 		</LinearLayout>

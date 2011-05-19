@@ -2,34 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingLeft="20dip" 
-	android:paddingRight="20dip"
-	android:paddingTop="20dip" 
-	android:paddingBottom="20dip" 
-    android:background="#FFFFFF" android:layout_gravity="top" android:orientation="vertical">
+    android:background="#FFFFFF" android:layout_gravity="top" android:orientation="vertical" android:padding="20dip">
     <ImageButton 
     	android:layout_width="50dip" 
     	android:layout_height="50dip" 
     	android:src="@drawable/icon_info" 
     	android:layout_gravity="right" android:id="@+id/buttonInfo">
     </ImageButton>
-    <TextView 
-    	android:layout_width="wrap_content" 
-    	android:id="@+id/textView1" 
-    	android:gravity="center|center_horizontal" 
-    	android:keepScreenOn="true" 
-    	android:layout_gravity="center" 
-    	android:layout_height="225dip" 
-    	android:layout_marginBottom="50sp" 
-    	android:textSize="24sp" 
-    	android:text="ALKONACKAN" 
-    	android:textColor="#333333">
-    </TextView>
+    <TextView android:gravity="center|center_horizontal" android:layout_gravity="center" android:id="@+id/textView1" android:layout_height="80dip" android:text="ALKONACKAN" android:layout_width="wrap_content" android:keepScreenOn="true" android:textColor="#333333" android:textSize="24sp" android:layout_marginBottom="20dip"></TextView>
+    <TextView android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Gör dina personliga inställningar innan du startar." android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50dip"></TextView>
     <Button 
     	android:id="@+id/buttonStart" 
-    	android:text="Kom igång!" 
+    	android:text="Inställningar" 
     	android:layout_width="wrap_content" 
-    	android:layout_height="40sp" 
+    	android:layout_height="wrap_content" 
     	android:textSize="18sp" 
     	android:layout_gravity="center_horizontal|bottom">
     </Button>

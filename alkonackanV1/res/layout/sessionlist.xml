@@ -16,14 +16,6 @@
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content">
 			<Button 
-				android:text="Tillbaka" 
-				android:layout_width="wrap_content" 
-				android:layout_gravity="top|left" 
-				android:id="@+id/button1" 
-				android:layout_height="wrap_content"
-				android:textSize="18sp">
-			</Button>
-			<Button 
 				android:text="Ny session" 
 				android:layout_height="wrap_content" 
 				android:layout_width="wrap_content" 
@@ -40,6 +32,8 @@
 		android:layout_width="fill_parent" 
 		android:entries="@array/sessionItems" 
 		android:layout_height="fill_parent" 
-		android:fadingEdge="none">
+		android:fadingEdge="none"
+		android:cacheColorHint="#00000000">
+		
 	</ListView>
 </LinearLayout>

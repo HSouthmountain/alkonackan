@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -26,6 +27,17 @@ public class sessionlist extends Activity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.minlistitem, data);
 		lst.setAdapter(adapter);
+		
+		lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Intent show_overview = new Intent(sessionlist.this, overview.class);
+				startActivity(show_overview);
+				
+			}
+		});
 
 		Button ny_session = (Button) findViewById(R.id.buttonNewSession);
 		ny_session.setOnClickListener(new View.OnClickListener() {

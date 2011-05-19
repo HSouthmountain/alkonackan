@@ -3,11 +3,15 @@ package se.mah.k3.soderberg.hampus.alkonackanV1;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SlidingDrawer;
+import android.widget.Toast;
 import android.widget.SlidingDrawer.OnDrawerCloseListener;
 import android.widget.SlidingDrawer.OnDrawerOpenListener;
 import android.widget.Spinner;
@@ -58,5 +62,29 @@ public class session extends Activity {
 				startActivity(show_overview);
 			}
 		});	
+		
+		//Drickknappar
+		
+		ImageButton button_stark = (ImageButton) findViewById(R.id.button_stark);
+		button_stark.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
+				EditText varText = (EditText) findViewById(R.id.editText_var);
+				EditText vemText = (EditText) findViewById(R.id.editText_vem);
+
+				Toast toast = Toast.makeText(getApplicationContext(),
+						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: " + varText.getText() + " \nMed: " + vemText.getText() + " \n\n50cl starkšl",
+						Toast.LENGTH_SHORT);
+				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+				toast.show();
+
+				varText.clearFocus();
+				vemText.clearFocus();	
+			}
+		});
+		
+		
 	}
 }

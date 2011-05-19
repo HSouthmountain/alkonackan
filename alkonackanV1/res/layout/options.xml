@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF" android:padding="20dip">
     <TextView 
     	android:layout_height="wrap_content" 
     	android:layout_width="wrap_content" 
@@ -11,9 +11,7 @@
     	android:text="Dina inställningar" 
     	android:textColor="#333333" 
     	android:layout_gravity="center_horizontal" 
-    	android:layout_marginTop="20sp" 
-    	android:textSize="24sp" 
-    	android:layout_marginBottom="30sp">
+    	android:textSize="24sp" android:layout_marginBottom="20sp">
     </TextView>
     <RadioGroup 
     	android:layout_width="wrap_content" 
@@ -27,8 +25,7 @@
         	android:layout_width="wrap_content" 
         	android:checked="true" 
         	android:text="Man" 
-        	android:textColor="#333333" 
-        	android:layout_marginRight="5sp">
+        	android:textColor="#333333" android:layout_marginRight="20dip">
         </RadioButton>
         <RadioButton 
         	android:id="@+id/radioKvinna" 
@@ -38,22 +35,22 @@
         	android:textColor="#333333" 
         	android:layout_marginLeft="5sp">
         </RadioButton>
-    </RadioGroup> 
+    </RadioGroup>
+    <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="Din vikt" android:layout_width="wrap_content"></TextView> 
     <Spinner 
     	android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
-		android:layout_marginLeft="50sp"
-		android:layout_marginRight="50sp" 
 		android:prompt="@string/vikt_prompt"
 		android:drawSelectorOnTop="true" 
 		android:fadeScrollbars="true"
-		android:layout_marginBottom="150sp" 
-		android:contentDescription="Vikt" android:id="@+id/spinnerVikt">
+		android:contentDescription="Vikt" android:id="@+id/spinnerVikt" android:layout_marginBottom="10dip">
 	</Spinner>
+    <TextView android:text="Ange ett lösenord för applikationen" android:id="@+id/textView_password" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:layout_height="wrap_content" android:id="@+id/editText_password" android:layout_width="fill_parent" android:hint="" android:layout_marginBottom="50dip" android:maxLines="1"></EditText>
     <Button 
     	android:layout_width="wrap_content" 
-    	android:text="Kom igång!" 
-    	android:layout_height="40sp" 
+    	android:text="Spara" 
+    	android:layout_height="wrap_content" 
     	android:layout_gravity="center_horizontal|bottom"
     	android:textSize="18sp" android:id="@+id/buttonOptionsStart">
     </Button>

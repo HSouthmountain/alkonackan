@@ -1,64 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#FFFFFF" 
-    android:paddingLeft="10sp" 
-    android:paddingRight="10sp">
-    <TextView
-    	android:id="@+id/Sammanfattning"
-    	android:text="Sammanfattning"
-    	android:layout_gravity="center_horizontal" 
-    	android:layout_marginTop="20sp"
-    	android:layout_marginBottom="15sp" 
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:textSize="24sp" 
-    	android:textColor="#333333" >
-    </TextView>
-    <TextView 
-    	android:text="Känsla" 
-    	android:id="@+id/kanslosam" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content"
-    	android:textColor="#333333" 
-    	android:textSize="24sp"
-    	android:layout_marginBottom="10sp">
-    </TextView>
-    <TextView 
-    	android:text="Plats" 
-    	android:id="@+id/textViewOverviewLocationHeader" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content"
-    	android:textColor="#333333" 
-    	android:textSize="24sp"
-    	android:layout_marginBottom="10sp">
-    </TextView>
-    <TextView 
-    	android:text="Med" 
-    	android:id="@+id/medsam" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content"
-    	android:textColor="#333333" 
-    	android:textSize="24sp"
-    	android:layout_marginBottom="10sp">
-    </TextView>
-    <ListView 
-    	android:id="@+id/listViewOverviewLocations" 
-    	android:layout_height="wrap_content" 
-    	android:layout_width="fill_parent">
-    </ListView>
-    <ImageView 
-    	android:id="@+id/imageViewDrinkIcon2" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
-    	android:src="@drawable/icon">
-    </ImageView>
-    <ImageView 
-    	android:id="@+id/imageViewDrinkIcon1" 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
-    	android:src="@drawable/icon">
-    </ImageView>
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#FFFFFF"
+	android:paddingLeft="10sp" android:paddingRight="10sp">
+	<TextView android:text="Sessionssammanfattning" android:id="@+id/textView1"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="#000" android:layout_marginBottom="10dip"></TextView>
+	<TextView android:textColor="#000" android:text="Känslor:"
+		android:id="@+id/textView2" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></TextView>
+	<TextView android:layout_marginLeft="10dip" android:textColor="#000"
+		android:textSize="18sp" android:layout_marginBottom="10dip"
+		android:text="Glad, Glad, Glad, Arg, Snygg" android:id="@+id/textView5"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	<TextView android:textColor="#000" android:id="@+id/textView3"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Platser:"></TextView>
+	<TextView android:layout_marginLeft="10dip" android:textColor="#000"
+		android:textSize="18sp" android:layout_marginBottom="10dip"
+		android:text="Hemma, Hemma, Debaser, Debaser, Debaser" android:id="@+id/textView6"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	<TextView android:textColor="#000" android:id="@+id/textView4"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Med:"></TextView>
+	<TextView android:layout_marginLeft="10dip" android:textColor="#000"
+		android:textSize="18sp" android:layout_marginBottom="10dip"
+		android:text="Peter, Peter, Peter, Filip, Nils" android:id="@+id/textView7"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+
+	<TableLayout android:id="@+id/tableLayout1"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TableRow android:id="@+id/tableRow1" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="10sp">
+			<ImageView android:src="@drawable/icon_stark" android:id="@+id/button_stark"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginLeft="0sp"></ImageView><TextView android:text="x2" android:textColor="#fb0" android:layout_width="wrap_content"></TextView>
+			<ImageView android:src="@drawable/icon_vin" android:id="@+id/button_vin"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginLeft="30sp"></ImageView><TextView android:text="x2" android:textColor="#fb0" android:layout_width="wrap_content"></TextView>
+			<ImageView android:src="@drawable/icon_drink" android:id="@+id/button_drink"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginLeft="30sp"></ImageView><TextView android:text="x1" android:textColor="#fb0" android:layout_width="wrap_content"></TextView>
+		</TableRow>
+	</TableLayout>
+
+
+
+
+
+
+
+	<ListView android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/listViewOverviewLocations"></ListView>
 </LinearLayout>
