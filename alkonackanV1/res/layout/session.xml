@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:paddingLeft="20dip" android:paddingRight="20dip"
-	android:paddingTop="20dip" android:paddingBottom="0sp" android:orientation="vertical"
-	android:background="#FFFFFF" xmlns:android="http://schemas.android.com/apk/res/android">
-	<Spinner android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:prompt="@string/kanslor_prompt"
-		android:drawSelectorOnTop="true" android:fadeScrollbars="true"
-		android:contentDescription="Kanslor" android:id="@+id/spinner_kanslor"
-		android:layout_marginTop="21sp">
-</Spinner>
-	<EditText android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:id="@+id/editText_var"
-		android:hint="Vart är du?" android:layout_marginTop="75sp"
+<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:paddingLeft="20dip" 
+	android:paddingRight="20dip"
+	android:paddingTop="20dip" 
+	android:paddingBottom="0sp" 
+	android:orientation="vertical"
+	android:background="#FFFFFF" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<Spinner 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:prompt="@string/kanslor_prompt"
+		android:drawSelectorOnTop="true" 
+		android:fadeScrollbars="true"
+		android:contentDescription="Kanslor" 
+		android:id="@+id/spinner_kanslor"
+		android:layout_marginTop="20sp">
+	</Spinner>
+	<EditText 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/editText_var"
+		android:hint="Vart är du?" 
+		android:layout_marginTop="75sp"
 		android:maxLines="1">
 	</EditText>
-	<EditText android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:id="@+id/editText_vem"
-		android:hint="Med vem?" android:layout_marginTop="130sp"
+	<EditText 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/editText_vem"
+		android:hint="Med vem?" 
+		android:layout_marginTop="130sp"
 		android:maxLines="1">
 	</EditText>
-
 	<TableLayout 
 		android:id="@+id/tableLayout1" 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content" 
-		android:layout_marginTop="190sp">
+		android:layout_marginTop="190sp"
+		android:layout_marginLeft="30sp">
 		<TableRow 
 			android:id="@+id/tableRow1" 
 			android:layout_width="fill_parent" 
@@ -35,56 +51,73 @@
 				android:id="@+id/button_stark" 
 				android:layout_width="wrap_content" 
 				android:layout_height="wrap_content" 
-				android:layout_marginLeft="0sp"></ImageButton>
+				android:layout_marginLeft="0sp">
+			</ImageButton>
 			<ImageButton 
 				android:src="@drawable/icon_folk" 
 				android:id="@+id/button_folk" 
 				android:layout_width="wrap_content" 
 				android:layout_height="wrap_content" 
-				android:layout_marginLeft="30sp"></ImageButton>
-			<ImageButton 
-				android:src="@drawable/icon_vin" 
-				android:id="@+id/button_vin" 
-				android:layout_width="wrap_content" 
-				android:layout_height="wrap_content" 
-				android:layout_marginLeft="30sp"></ImageButton>
+				android:layout_marginLeft="45sp">
+			</ImageButton>	
 		</TableRow>
 		<TableRow 
 			android:id="@+id/tableRow2" 
 			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10sp">
 			<ImageButton 
 				android:src="@drawable/icon_drink" 
 				android:id="@+id/button_drink" 
 				android:layout_width="wrap_content" 
 				android:layout_height="wrap_content" 
-				android:layout_marginLeft="0sp"></ImageButton>
+				android:layout_marginLeft="0sp">
+			</ImageButton>
 			<ImageButton 
-				android:src="@drawable/icon_oel" android:id="@+id/button_oel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
-			<ImageButton android:src="@drawable/icon_shot" android:id="@+id/button_shot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30sp"></ImageButton>
+				android:src="@drawable/icon_oel" 
+				android:id="@+id/button_oel" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginLeft="45sp">
+			</ImageButton>
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow2" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+			<ImageButton 
+				android:src="@drawable/icon_vin" 
+				android:id="@+id/button_vin" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginLeft="0sp">
+			</ImageButton>
+			<ImageButton 
+				android:src="@drawable/icon_shot" 
+				android:id="@+id/button_shot" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginLeft="45sp">
+			</ImageButton>
 		</TableRow>
 	</TableLayout>
-
  	<SlidingDrawer 
  		android:id="@+id/slidingDrawerOffDrawer"
 		android:layout_width="fill_parent" 
 		android:layout_height="fill_parent"
 		android:handle="@+id/handle" 
 		android:content="@+id/content"
-		android:layout_marginTop="400dip">
-		
+		android:layout_marginTop="400dip">	
 		<ImageView
 			android:id="@id/handle"
 			android:src="@drawable/avslutaknapp" 
 			android:layout_width="99dip"
-         	android:layout_height="23dip"/>
-         	
+         	android:layout_height="23dip"/>  	
 		<LinearLayout android:id="@+id/content"
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
 			android:gravity="center_horizontal"
-			android:background="#e8e8e8">
-			
+			android:background="#e8e8e8">	
 			<Button 
 				android:text="Avsluta session" 
 				android:layout_height="wrap_content" 
@@ -92,11 +125,10 @@
 				android:id="@+id/buttonAvslutaSession" 
 				android:textSize="18sp"
 				android:layout_margin="20dip">
-			</Button>
-			
+			</Button>	
 		</LinearLayout>
 	</SlidingDrawer>
- 
+</RelativeLayout>
 
 <!--  <SlidingDrawer
      android:id="@+id/slidingDrawerOffDrawer"
@@ -117,6 +149,3 @@
          android:layout_height="fill_parent" />
 
  </SlidingDrawer> -->
-
-
-</RelativeLayout>
