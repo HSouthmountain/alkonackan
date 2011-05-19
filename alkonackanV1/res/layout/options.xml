@@ -1,57 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#FFFFFF" android:padding="20dip">
-    <TextView 
-    	android:layout_height="wrap_content" 
-    	android:layout_width="wrap_content" 
-    	android:id="@+id/textView1" 
-    	android:text="Dina inställningar" 
-    	android:textColor="#333333" 
-    	android:layout_gravity="center_horizontal" 
-    	android:textSize="24sp" android:layout_marginBottom="20sp">
-    </TextView>
-    <RadioGroup 
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
-    	android:orientation="horizontal" 
-    	android:layout_gravity="center" 
-    	android:layout_marginBottom="20sp" android:id="@+id/radioManKvinna">
-        <RadioButton 
-        	android:id="@+id/radioMan" 
-        	android:layout_height="wrap_content" 
-        	android:layout_width="wrap_content" 
-        	android:checked="true" 
-        	android:text="Man" 
-        	android:textColor="#333333" android:layout_marginRight="20dip">
-        </RadioButton>
-        <RadioButton 
-        	android:id="@+id/radioKvinna" 
-        	android:layout_height="wrap_content" 
-        	android:layout_width="wrap_content" 
-        	android:text="Kvinna" 
-        	android:textColor="#333333" 
-        	android:layout_marginLeft="5sp">
-        </RadioButton>
-    </RadioGroup>
-    <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="Din vikt" android:layout_width="wrap_content"></TextView> 
-    <Spinner 
-    	android:layout_width="fill_parent"
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="#FFFFFF"
+	android:padding="20dip">
+	<TextView 
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content" 
+		android:id="@+id/textView1"
+		android:text="Dina inställningar" 
+		android:textColor="#333333"
+		android:layout_gravity="center_horizontal" 
+		android:textSize="24sp"
+		android:layout_marginBottom="20sp">
+	</TextView>
+	<RadioGroup 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_gravity="center" 
+		android:layout_marginBottom="20sp"
+		android:id="@+id/radioManKvinna">
+		<RadioButton 
+			android:id="@+id/radioMan"
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:checked="true" android:text="Man" 
+			android:textColor="#333333"
+			android:layout_marginRight="20dip">
+		</RadioButton>
+		<RadioButton 
+			android:id="@+id/radioKvinna"
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:text="Kvinna" 
+			android:textColor="#333333"
+			android:layout_marginLeft="5sp">
+		</RadioButton>
+	</RadioGroup>
+	<TextView 
+		android:id="@+id/textView2" 
+		android:layout_height="wrap_content"
+		android:text="Din vikt" 
+		android:layout_width="wrap_content">
+	</TextView>
+	<Spinner 
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
 		android:prompt="@string/vikt_prompt"
 		android:drawSelectorOnTop="true" 
 		android:fadeScrollbars="true"
-		android:contentDescription="Vikt" android:id="@+id/spinnerVikt" android:layout_marginBottom="10dip">
+		android:contentDescription="Vikt" 
+		android:id="@+id/spinnerVikt"
+		android:layout_marginBottom="10dip">
 	</Spinner>
-    <TextView android:text="Ange ett lösenord för applikationen" android:id="@+id/textView_password" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <EditText android:layout_height="wrap_content" android:id="@+id/editText_password" android:layout_width="fill_parent" android:hint="" android:layout_marginBottom="50dip" android:maxLines="1"></EditText>
-    <Button 
-    	android:layout_width="wrap_content" 
-    	android:text="Spara" 
-    	android:layout_height="wrap_content" 
-    	android:layout_gravity="center_horizontal|bottom"
-    	android:textSize="18sp" android:id="@+id/buttonOptionsStart">
-    </Button>
+	<TextView 
+		android:text="Ange ett lösenord för applikationen"
+		android:id="@+id/textView_password" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</TextView>
+	<EditText 
+		android:layout_height="wrap_content" 
+		android:id="@+id/editText_password"
+		android:layout_width="fill_parent" 
+		android:hint=""
+		android:layout_marginBottom="50dip" 
+		android:inputType="textShortMessage">
+	</EditText>
+	<Button 
+		android:layout_width="wrap_content" 
+		android:text="Spara"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center_horizontal|bottom"
+		android:textSize="18sp" 
+		android:id="@+id/buttonOptionsStart">
+	</Button>
 </LinearLayout>
