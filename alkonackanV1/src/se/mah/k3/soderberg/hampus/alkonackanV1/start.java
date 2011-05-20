@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 public class start extends Activity {
+	
+	Bundle dataBundle = new Bundle();
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

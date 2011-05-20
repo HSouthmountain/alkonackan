@@ -47,7 +47,7 @@
 			android:layout_marginBottom="10sp">
 			<ImageButton 
 				android:src="@drawable/icon_stark" 
-				android:id="@+id/button_stark" 
+				android:id="@+id/button_stark"
 				android:layout_width="130dp" 
 				android:layout_height="90dp" 
 				android:layout_marginLeft="0sp">

@@ -18,12 +18,35 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class session extends Activity {
+	
+	Bundle dataBundle;
+	
+	//EditTextVar
+	private EditText textVar;
+	//private String textVarData;
+	//EditText
+	private EditText textVem;
+	//private String textVemData;
+	
+	private int drinkId = 0;
+	
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.session);
 
+		
+		//EditTextVar
+		textVar=(EditText)findViewById(R.id.editText_var);
+		
+		//EditTextVem
+		textVem=(EditText)findViewById(R.id.editText_vem);
+		
+		
+		
+		
 		SlidingDrawer offDrawer;
 
 		// SlidingDrawer
@@ -58,6 +81,21 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				//Spara instÃ¤llningar till dataBundle
+				
+				int checkpoint = 0;
+				
+				//Spara "var"
+				if (textVar.getText().toString() !=null){
+					dataBundle.putString("var", textVar.getText().toString());
+					checkpoint++;
+				}
+				if (textVem.getText().toString() !=null){
+					dataBundle.putString("var", textVem.getText().toString());
+					checkpoint++;
+				}
+				
 				Intent show_overview = new Intent(session.this, overview.class);
 				startActivity(show_overview);
 			}
@@ -70,24 +108,26 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				drinkId=1;
+				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
-				Toast toast = Toast.makeText(
-						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
-								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\nStor stark",
+				Toast toast = Toast.makeText(getApplicationContext(),
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: " + varText.getText() + " \nMed: " + vemText.getText() + " \n\n50cl starkï¿½l",
+
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
-
+				
+				
 				varText.clearFocus();
 				vemText.clearFocus();
 			}
 		});
-
+		
 		ImageButton button_folk = (ImageButton) findViewById(R.id.button_folk);
 		button_folk.setOnClickListener(new View.OnClickListener() {
 
@@ -99,9 +139,9 @@ public class session extends Activity {
 
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\nFolkšl",
+								+ vemText.getText() + " \n\nFolkï¿½l",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
@@ -122,7 +162,7 @@ public class session extends Activity {
 
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
 								+ vemText.getText() + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
@@ -145,7 +185,7 @@ public class session extends Activity {
 
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
 								+ vemText.getText() + " \n\n33 cl 5,2%",
 						Toast.LENGTH_SHORT);
@@ -168,7 +208,7 @@ public class session extends Activity {
 
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
 								+ vemText.getText() + " \n\nEtt glas vin",
 						Toast.LENGTH_SHORT);
@@ -191,7 +231,7 @@ public class session extends Activity {
 
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"KŠnsla: " + kansla.getSelectedItem() + "\nVart: "
+						"Kï¿½nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
 								+ vemText.getText() + " \n\n4 cl Shot",
 						Toast.LENGTH_SHORT);
@@ -204,4 +244,4 @@ public class session extends Activity {
 		});
 
 	}
-}
+	}
