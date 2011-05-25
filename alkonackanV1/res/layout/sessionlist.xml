@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="#FFFFFF" 
-	xmlns:android="http://schemas.android.com/apk/res/android" 
-	android:padding="20dip">
-	<TableLayout 
-		android:id="@+id/tableLayout1" 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content" 
-		android:layout_marginBottom="10dip">
-		<TableRow 
-			android:id="@+id/tableRow1" 
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content">
-			<Button 
-				android:text="Ny session" 
-				android:layout_height="wrap_content" 
-				android:layout_width="wrap_content" 
-				android:layout_gravity="top|right" 
-				android:id="@+id/buttonNewSession" 
-				android:layout_marginLeft="40dip"
-				android:textSize="18sp">
-			</Button>
-		</TableRow>
-	</TableLayout>
-	<ListView 
-		android:textColor="#ffffff"
-		android:id="@+id/listViewSessions" 
-		android:layout_width="fill_parent" 
-		android:entries="@array/sessionItems" 
-		android:layout_height="fill_parent" 
-		android:fadingEdge="none"
-		android:cacheColorHint="#00000000">
-		
-	</ListView>
+
+<LinearLayout android:orientation="vertical"
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+android:background="#FFFFFF" android:padding="0dip"
+android:layout_margin="0dip" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TableLayout android:id="@+id/tableLayout2"
+android:layout_height="wrap_content"
+android:layout_width="fill_parent">
+
+<TableRow 
+android:layout_width="fill_parent" 
+android:id="@+id/tableRow2" 
+android:layout_height="wrap_content">
+
+<ImageView android:id="@+id/buttinNyAktivitet" android:src="@drawable/meny_ny"
+android:scaleType="fitStart"
+android:layout_height="wrap_content"
+android:layout_width="194px"></ImageView>
+
+<ImageView android:id="@+id/buttonInfo" android:src="@drawable/meny_info"
+android:scaleType="fitStart"
+android:layout_height="wrap_content"
+android:layout_width="63px"></ImageView>
+
+<ImageView android:id="@+id/buttonInstallningar" android:src="@drawable/meny_installningar" 
+android:scaleType="fitStart"
+android:layout_height="wrap_content"
+android:layout_width="63px"></ImageView>
+
+</TableRow>
+</TableLayout>
+
+<ListView android:textColor="#ffffff" android:id="@+id/listViewSessions"
+android:layout_width="fill_parent" android:entries="@array/sessionItems"
+android:layout_height="fill_parent" android:cacheColorHint="#00000000"
+android:fadeScrollbars="true">
+</ListView>
+
 </LinearLayout>

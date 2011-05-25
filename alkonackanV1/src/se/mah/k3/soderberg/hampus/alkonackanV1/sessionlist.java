@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -39,7 +40,7 @@ public class sessionlist extends Activity {
 			}
 		});
 
-		Button ny_session = (Button) findViewById(R.id.buttonNewSession);
+		ImageView ny_session = (ImageView) findViewById(R.id.buttinNyAktivitet);
 		ny_session.setOnClickListener(new View.OnClickListener() {
 			
 			@Override

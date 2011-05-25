@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class session extends Activity {
 	
-	Bundle dataBundle;
+//	Bundle dataBundle;
 	
 	//EditTextVar
 	private EditText textVar;
@@ -88,11 +88,11 @@ public class session extends Activity {
 				
 				//Spara "var"
 				if (textVar.getText().toString() !=null){
-					dataBundle.putString("var", textVar.getText().toString());
+//					dataBundle.putString("var", textVar.getText().toString());
 					checkpoint++;
 				}
 				if (textVem.getText().toString() !=null){
-					dataBundle.putString("var", textVem.getText().toString());
+//					dataBundle.putString("var", textVem.getText().toString());
 					checkpoint++;
 				}
 				
