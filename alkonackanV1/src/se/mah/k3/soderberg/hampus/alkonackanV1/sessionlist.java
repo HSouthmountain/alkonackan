@@ -1,5 +1,7 @@
 package se.mah.k3.soderberg.hampus.alkonackanV1;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,11 +17,23 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 public class sessionlist extends Activity {
+	
+	Bundle dataBundle;// = getIntent().getExtras();
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		dataBundle = getIntent().getExtras();
+	}
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sessionlist);
+		
+		dataBundle = getIntent().getExtras();
 
 		String[] data = new String[] { "14 mars, 2011", "15 mars, 2011",
 				"23 mars, 2011", "27 mars, 2011", "5 maj, 2011",
@@ -45,7 +59,17 @@ public class sessionlist extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				
+				//dataBundle.
+				//ArrayList<DrinkSession> drinkSessioner = new ArrayList<DrinkSession>();
+				
+				//skpapa i start.java så den finns från början.
+				
 				Intent show_session = new Intent(sessionlist.this, session.class);
+				
+				//Sparar inställningar
+				show_session.putExtras(dataBundle);
+				
 				startActivity(show_session);
 			}
 		});		

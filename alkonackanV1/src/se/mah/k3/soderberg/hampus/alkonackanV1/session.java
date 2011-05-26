@@ -19,16 +19,38 @@ import android.widget.TextView;
 
 public class session extends Activity {
 	
-//	Bundle dataBundle;
+	Bundle dataBundle;
+	//Bundle dataBundle = getIntent().getExtras();
 	
 	//EditTextVar
-	private EditText textVar;
-	//private String textVarData;
-	//EditText
-	private EditText textVem;
-	//private String textVemData;
+	//private EditText textVar;
+	private String textVarData;
+	//EditTextVem
+	//private EditText textVem;
+	private String textVemData;
 	
-	private int drinkId = 0;
+	//private int drinkId = 0;			//Dessa variabler skall in i Bundlen: dataBundle;
+	
+	private int drinkStark = 0;
+	private int drinkFolk = 0;
+	private int drinkDrink = 0;
+	private int drinkOel = 0;
+	private int drinkVin = 0;
+	private int drinkShot = 0;
+	
+	private String stringKanslaData;
+	
+	//private drinkSession nySession
+	
+	//private Drink myDrink = new Drink("test","test","test");
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		dataBundle = getIntent().getExtras();
+	}
 	
 	
 	/** Called when the activity is first created. */
@@ -36,13 +58,16 @@ public class session extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.session);
-
+		
+		dataBundle = getIntent().getExtras();
+		//dataBundle.putInt("starkAntal",drinkStark);
 		
 		//EditTextVar
-		textVar=(EditText)findViewById(R.id.editText_var);
+		//textVar=(EditText)findViewById(R.id.editText_var);
+		
 		
 		//EditTextVem
-		textVem=(EditText)findViewById(R.id.editText_vem);
+		//textVem=(EditText)findViewById(R.id.editText_vem);
 		
 		
 		
@@ -84,19 +109,36 @@ public class session extends Activity {
 				
 				//Spara inställningar till dataBundle
 				
+				//dataBundle.putInt("starkAntal",drinkStark);
+				
+				
 				int checkpoint = 0;
 				
 				//Spara "var"
-				if (textVar.getText().toString() !=null){
-//					dataBundle.putString("var", textVar.getText().toString());
+				/*if (textVar.getText().toString() !=null){
+					//dataBundle.putString("var", textVar.getText());
 					checkpoint++;
 				}
 				if (textVem.getText().toString() !=null){
-//					dataBundle.putString("var", textVem.getText().toString());
+					textVarData = textVar.getText().toString();
+					dataBundle.putString("heJ", "data");
 					checkpoint++;
-				}
+				}*/
+				
+				//Sparar variabler
+				
+				//dataBundle.putInt(drinkId);	
+				
+				dataBundle.putInt("stark",	drinkStark);
+				dataBundle.putInt("folk",	drinkFolk);
+				dataBundle.putInt("drink",	drinkDrink);
+				dataBundle.putInt("oel",	drinkOel);
+				dataBundle.putInt("vin",	drinkVin);
+				dataBundle.putInt("shot",	drinkShot);
+				
 				
 				Intent show_overview = new Intent(session.this, overview.class);
+				show_overview.putExtras(dataBundle);
 				startActivity(show_overview);
 			}
 		});
@@ -109,20 +151,30 @@ public class session extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				drinkId=1;
+				
 				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
-				Toast toast = Toast.makeText(getApplicationContext(),
-						"K�nsla: " + kansla.getSelectedItem() + "\nVart: " + varText.getText() + " \nMed: " + vemText.getText() + " \n\n50cl stark�l",
-
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				
+				
+				
+				
+				drinkStark++;
+				
+				Toast toast = Toast.makeText(
+						getApplicationContext(),
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
-				
-				
+
 				varText.clearFocus();
 				vemText.clearFocus();
 			}
@@ -137,11 +189,16 @@ public class session extends Activity {
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				drinkFolk++;
+				
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"K�nsla: " + kansla.getSelectedItem() + "\nVart: "
-								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\nFolk�l",
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
@@ -156,11 +213,31 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				
+				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
+				
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				
 				Toast toast = Toast.makeText(
+						getApplicationContext(),
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
+						Toast.LENGTH_SHORT);
+				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+				toast.show();
+
+				varText.clearFocus();
+				vemText.clearFocus();
+				
+				/*Toast toast = Toast.makeText(
 						getApplicationContext(),
 						"K�nsla: " + kansla.getSelectedItem() + "\nVart: "
 								+ varText.getText() + " \nMed: "
@@ -170,7 +247,7 @@ public class session extends Activity {
 				toast.show();
 
 				varText.clearFocus();
-				vemText.clearFocus();
+				vemText.clearFocus();*/
 			}
 		});
 
@@ -179,15 +256,22 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				drinkOel++;
+				
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"K�nsla: " + kansla.getSelectedItem() + "\nVart: "
-								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\n33 cl 5,2%",
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
@@ -202,15 +286,22 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				drinkVin++;
+				
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"K�nsla: " + kansla.getSelectedItem() + "\nVart: "
-								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\nEtt glas vin",
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
@@ -225,15 +316,22 @@ public class session extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				
 				Spinner kansla = (Spinner) findViewById(R.id.spinner_kanslor);
 				EditText varText = (EditText) findViewById(R.id.editText_var);
 				EditText vemText = (EditText) findViewById(R.id.editText_vem);
 
+				stringKanslaData = (""+kansla.getSelectedItem());
+				textVarData = (""+varText.getText());
+				textVemData = (""+vemText.getText());
+				drinkShot++;
+				
 				Toast toast = Toast.makeText(
 						getApplicationContext(),
-						"K�nsla: " + kansla.getSelectedItem() + "\nVart: "
-								+ varText.getText() + " \nMed: "
-								+ vemText.getText() + " \n\n4 cl Shot",
+						"K�nsla: " + stringKanslaData + "\nVart: "
+								+ textVarData + " \nMed: "
+								+ textVemData + " \n\nDrink 4 cl",
 						Toast.LENGTH_SHORT);
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.show();
@@ -244,4 +342,5 @@ public class session extends Activity {
 		});
 
 	}
+
 	}
